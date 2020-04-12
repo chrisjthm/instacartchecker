@@ -1,4 +1,5 @@
 Flask
 gunicorn
+python-gi
 requests
 playsound
