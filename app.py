@@ -33,8 +33,8 @@ def check(store, cookie):
                     yield "Found availability at: " + timenow + \
                           "\nIf you think this is wrong, please recheck store name and try again"
                     break
-                yield "No availability at " + timenow + ", checking again in 1 minute.\n"
-                time.sleep(60)
+                yield "No availability at " + timenow + ", checking again in 30 seconds.\n"
+                time.sleep(30)
         return Response(check_on_loop(), content_type='text/event-stream')
 
 
