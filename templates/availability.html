@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Suggestions</title>
+</head>
+
+<body>
+
+<div id="availability_display"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+$("#search_form_input").keyup(function(){
+    var text = $(this).val();
+
+    $.ajax({
+        url: "/availability",
+        type: "get",
+        data: {jsdata: text},
+        success: function (response) {
+            $("#availability_display").append($($.parseJSON(response)).each(function (index, item) {
+                $('<div>').text(item).append($('<br>'))
+            }));
+        },
+        error: function (xhr) {
+            //Do Something to handle error
+        }
+    });
+});
+
+</script>
+
+</body>
