@@ -2,6 +2,7 @@ from flask import Flask
 from playsound import playsound
 from instacart import instacart_api
 from flask import Flask, render_template, request, Response
+
 from datetime import datetime
 import time
 app = Flask(__name__)
@@ -43,7 +44,8 @@ def check(store, cookie):
 
 @app.route('/test_sound')
 def test_sound():
-    playsound("instacart/airhorn.mp3")
+    playsound("airhorn.mp3")
+    return "Sound played! That was fun."
 
 
 if __name__ == '__main__':

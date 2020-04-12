@@ -5,19 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-Instructions:
-1. Open Instacart in Google Chrome browser.
-2. Right click in your browser and select "Inspect".
-3. In the resulting menu, open "Network" tab. In the "filter" search bar, type "delivery". You should see no results for now, but keep this open.
-4. Go back to instacart in your browser, find the store you want to order from, and select "See delivery times"
-5. This should bring up a result in the "Network" tab on the right hand side. Click on it, this should bring up a tab showing "Headers"
-6. In headers tab, scroll down to "Request headers" and look for "cookie", its contents should start with "ahoy_track=true...". Copy the contents and paste them into the form above.
-7. Now look at the instacart URL in your browser, the store name should be somewhere in the URL, for example, "shoprite". Copy this exact name and paste it in the form above.
-8. Make sure to turn your volume on, and submit! We will check every minute and play a sound when we find an availability.
 <form action="{{ url_for('home') }}" method="post">
     Store: <input type="text" name="store">
     Cookie: <input type="text" name="cookie">
     <input type="submit">
 </form>
+Instructions: <br />
+1. Open Instacart in Google Chrome browser. <br />
+2. Right click in your browser and select "Inspect". <br />
+3. In the resulting menu, open "Network" tab. In the "filter" search bar, type "delivery". You should see no results for now, but keep this open. <br />
+4. Go back to instacart in your browser, find the store you want to order from, and select "See delivery times"<br />
+5. This should bring up a result in the "Network" tab on the right hand side. Click on it, this should bring up a tab showing "Headers"<br />
+6. In headers tab, scroll down to "Request headers" and look for "cookie", its contents should start with "ahoy_track=true...". Copy the contents and paste them into the form above.<br />
+7. Now look at the instacart URL in your browser, the store name should be somewhere in the URL, for example, "shoprite". Copy this exact name and paste it in the form above.<br />
+8. Make sure to turn your volume on, and submit! We will check every minute and play a sound when we find an availability. (To test sound - go to http://instacartchecker.herokuapp.com/test_sound)<br />
 </body>
 </html>
