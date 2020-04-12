@@ -1,7 +1,6 @@
 import requests
 import json
 import time
-from playsound import playsound
 import datetime
 
 base_domain = "https://www.instacart.com"
