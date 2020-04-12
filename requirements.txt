@@ -1,6 +1,6 @@
+pip=='20.0.2'
 Flask
 gunicorn
 requests
 playsound
-pyobjc-framework-SyncServices
 PyObjC
