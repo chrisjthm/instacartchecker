@@ -39,7 +39,6 @@ def check_availability(store,cookie):
     available = is_there_availability(get_availability_json(store,cookie))
     if available:
         print("Found availability at: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-        playsound("airhorn.mp3")
     print("No availability, checking again in 1 minute.")
 
 
@@ -47,7 +46,6 @@ def check_availability_on_loop(store,cookie):
     while True:
         available = is_there_availability(get_availability_json(store,cookie))
         if available:
-            playsound("airhorn.mp3")
             print("Found availability at: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
             break
         print("No availability, checking again in 1 minute.")

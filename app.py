@@ -1,5 +1,3 @@
-from flask import Flask
-import pygame
 from instacart import instacart_api
 from flask import Flask, render_template, request, Response
 
@@ -32,22 +30,12 @@ def check(store, cookie):
                     break
                 timenow = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 if available:
-                    playsound("airhorn.mp3")
                     yield "Found availability at: " + timenow + \
                           "\nIf you think this is wrong, please recheck store name and try again"
                     break
                 yield "No availability at " + timenow + ", checking again in 1 minute.\n"
                 time.sleep(60)
         return Response(check_on_loop(), content_type='text/event-stream')
-
-
-
-@app.route('/test_sound')
-def test_sound():
-    pygame.mixer.init()
-    pygame.mixer.music.load("airhorn.mp3")
-    pygame.mixer.music.play()
-    return "Sound played! That was fun."
 
 
 if __name__ == '__main__':
