@@ -48,8 +48,8 @@ def check_availability_on_loop(store,cookie):
         if available:
             print("Found availability at: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
             break
-        print("No availability, checking again in 1 minute.")
-        time.sleep(60)
+        print("No availability, checking again in 30 seconds.")
+        time.sleep(30)
 
 
 def is_valid_cookie(cookie):
