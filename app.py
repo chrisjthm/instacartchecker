@@ -1,5 +1,5 @@
 from flask import Flask
-from playsound import playsound
+import pygame
 from instacart import instacart_api
 from flask import Flask, render_template, request, Response
 
@@ -44,7 +44,9 @@ def check(store, cookie):
 
 @app.route('/test_sound')
 def test_sound():
-    playsound("airhorn.mp3")
+    pygame.mixer.init()
+    pygame.mixer.music.load("airhorn.mp3")
+    pygame.mixer.music.play()
     return "Sound played! That was fun."
 
 
