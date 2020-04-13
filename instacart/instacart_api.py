@@ -53,7 +53,7 @@ def check_availability_on_loop(store,cookie):
 
 
 def is_valid_cookie(cookie):
-    return "ahoy_track" in cookie and "amplitude_idundefinedinstacart" in cookie
+    return "ahoy" in cookie and "amplitude_idundefinedinstacart" in cookie
 
 
 if __name__ == "__main__":
