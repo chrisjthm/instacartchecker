@@ -8,6 +8,7 @@
 <form action="{{ url_for('home') }}" method="post">
     Store: <input type="text" name="store">
     Cookie: <input type="text" name="cookie">
+    Phone Number: <input type="text" name="phone_number">
     <input type="submit">
 </form>
 Instructions: <br />
@@ -18,6 +19,6 @@ Instructions: <br />
 5. This should bring up a result in the "Network" tab on the right hand side. Click on it, this should bring up a tab showing "Headers"<br />
 6. In headers tab, scroll down to "Request headers" and look for "cookie", its contents should start with "ahoy_track=true...". Copy the contents and paste them into the form above.<br />
 7. Now look at the instacart URL in your browser, the store name should be somewhere in the URL, for example, "shoprite". Copy this exact name and paste it in the form above.<br />
-8. Make sure to turn your volume on, and submit! We will check every minute and play a sound when we find an availability. (To test sound - go to http://instacartchecker.herokuapp.com/test_sound)<br />
+8. Now enter your phone number. We will text you if we find an availability<br />
 </body>
 </html>
